@@ -105,7 +105,7 @@ def open_owner_login(parent):
     tk.Button(login_window, text="Đăng nhập", font=("Arial", 11, "bold"), bg="#4CAF50", fg="white", width=18, command=login).pack(pady=10)
     tk.Button(login_window, text="Chưa có tài khoản? Đăng ký ngay", font=("Arial", 10, "underline"),
               bg="#f9f9f9", fg="blue", bd=0, cursor="hand2",
-              command=lambda: messagebox.showinfo("Đăng ký", "Mời đăng ký từ giao diện chính")).pack(pady=4)
+              command=lambda: register_user(login_window, 1, "Đăng ký Chủ trọ")).pack(pady=4)
     tk.Button(login_window, text="Quên mật khẩu?", font=("Arial", 10, "underline"),
               bg="#f9f9f9", fg="red", bd=0, cursor="hand2", command=forgot_password).pack(pady=4)
 
@@ -202,6 +202,7 @@ def open_tenant_page(parent):
 
     tk.Button(login_window, text="Đăng nhập", font=("Arial", 11, "bold"), bg="#2196F3", fg="white", width=18, command=login).pack(pady=10)
     tk.Button(login_window, text="Chưa có tài khoản? Đăng ký ngay", font=("Arial", 10, "underline"),
-              bg="#f9f9f9", fg="blue", bd=0, cursor="hand2", command=lambda: messagebox.showinfo("Đăng ký", "Mời đăng ký từ giao diện chính")).pack(pady=4)
+              bg="#f9f9f9", fg="blue", bd=0, cursor="hand2", command=lambda: register_user(login_window, 2, "Đăng ký Người thuê")).pack(pady=4)
     tk.Button(login_window, text="Quên mật khẩu?", font=("Arial", 10, "underline"),
               bg="#f9f9f9", fg="red", bd=0, cursor="hand2", command=forgot_password).pack(pady=4)
+from app_nhatro import register_user
